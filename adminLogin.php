@@ -1,6 +1,10 @@
 <?php
     session_start();
-    $_SESSION['intentosFallidos'] = $_SESSION['intentosFallidos'];
+    if(!isset($_SESSION['intentosFallidos'])) {
+        $_SESSION['intentosFallidos'] = 0;
+
+    }
+        
 ?>
 
 <!DOCTYPE html>
