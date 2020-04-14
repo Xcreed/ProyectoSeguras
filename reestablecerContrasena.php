@@ -10,11 +10,11 @@
     </head>
     <body>
         <h1>Login</h1>
-        <form action="reestablecerContrasenaHelper.php" method="post">
+        <form action="contrasenaNueva.php" method="post">
             <p>Ingrese su correo electrónico</p>
-            <input type='text' name="Correo electrónico" placeholder="Correo electrónico">
+            <input type='text' name="Correo electrónico" placeholder="Correo electrónico" id="correo">
             <br>
-            <input type='text' name="Frase de seguridad" placeholder="Frase de seguridad">
+            <input type='text' name="Palabra de seguridad" placeholder="Palabra de seguridad" id="palabraSeguridad">
             <br>
             <input type="submit" value="Reestablecer Contraseña">
         </form>

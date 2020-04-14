@@ -12,10 +12,6 @@
 
     $contrasenaDB = $resultado{0};
 
-
-
-    echo "Usuario: " . $usuario . " pw: " . $contrasenaDB . " contrasena: " . $contrasena;
-
     if ($contrasenaDB == $contrasena) {
         $_SESSION['usuarioValido'] = 1;
         header('Location: admin.php');

@@ -29,7 +29,6 @@
             <br>
             <a href="reestablecerContrasena.php">Reestablecer Contraseña</a>
             <p>Intentos Fallidos: <?php echo $_SESSION['intentosFallidos'];?></p>
-            <!-- Agregar que no salgan los intentos hasta que est[en en 1-->
         </form>
     </body>
 </html>
