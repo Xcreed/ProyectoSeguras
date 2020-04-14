@@ -1,21 +1,21 @@
 <?php
-    include "dbconnect.php";
+include "dbconnect.php";
 
-    $correo = $_POST["Correo"];
-    $palabraUsuario = $_POST["Palabra"];
+$correo = $_POST["Correo"];
+$palabraUsuario = $_POST["Palabra"];
 
-    $palabraVerificacion = mysqli_query($bdc, "select palabraSeguridad from admins where email = '$correo'") or die(mysqli_error($bdc));
+$palabraVerificacion = mysqli_query($bdc, "select palabraSeguridad from admins where email = '$correo'") or die(mysqli_error($bdc));
 
-    $resultado = mysqli_fetch_array($palabraVerificacion);
+$resultado = mysqli_fetch_array($palabraVerificacion);
 
-    $palabraDB = $resultado{0};
+$palabraDB = $resultado{0};
 
-    if ($palabraDB != $palabraUsuario) {
-        
-        header("Location:reestablecerContrasena.php");
-    } else {
+if ($palabraDB != $palabraUsuario) {
 
-    }
+    header("Location:reestablecerContrasena.php");
+} else {
+
+}
 
 ?>
 
@@ -30,19 +30,15 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <!--<h1>Login</h1>
-        <form action="contrasenaNueva.php" method="post">
-            <p>Ingrese su correo electrónico</p>
-            <input type='text' name="Correo electrónico" placeholder="Correo electrónico">
-            <br>
-            <input type='text' name="Palabra de seguridad" placeholder="Palabra de seguridad">
-            <br>
-            <input type="submit" value="Reestablecer Contraseña">
-        </form> -->
-        
-        <h1>Ingrese contraseña nueva:</h1>
 
-        <input type='text' name="contraseña nueva" placeholder="Contraseña nueva">
-        
+        <h1>Ingrese contraseña nueva:</h1>
+        <form method="post" action="adminLogin.php"> 
+            <input type="hidden" name="correo" value="<?php echo $correo;?>">
+            <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva">
+
+            <input type="submit" name="cambiar" value="Cambiar"/> 
+        </form>
+
+
     </body>
 </html>

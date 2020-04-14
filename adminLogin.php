@@ -4,12 +4,27 @@
         $_SESSION['intentosFallidos'] = 0;
 
     }
+
+    if(isset($_POST['contrasenaNueva'])){
+        $nuevaContrasena = $_POST['contrasenaNueva'];
+        $correo = $_POST['correo'];
+        if (isset($_POST['contrasenaNueva']) and $_POST['contrasenaNueva'] != "") {
+            include "dbconnect.php";
+
+            mysqli_query($bdc, "update admins set contrasena = '$nuevaContrasena' where email = '$correo'") or die(mysqli_error($bdc));
+
+            echo "Contrasena cambiada! La nueva es: " . $correo;
+        }
         
+    }
+
+
+
 ?>
 
 <!DOCTYPE html>
 <html>
-    
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +33,7 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-         <h1>Login</h1>
+        <h1>Login</h1>
         <form action="loginHelper.php" method="post">
             <p>Nombre</p>
             <input type='text' name="Usuario" placeholder="Usuario">

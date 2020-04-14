@@ -26,3 +26,5 @@ if (!isset($_SESSION['usuarioValido']) or $_SESSION['usuarioValido'] == 0) {
 
     </body>
 </html>
+
+<!-- Agregar con JS que se requieran los campos con valores -->
