@@ -1,12 +1,10 @@
 <?php
     include "dbconnect.php";
 
-    $correo = $_POST["correo"];
-    $palabraUsuario = $_POST["palabraSeguridad"];
+    $correo = $_POST["Correo"];
+    $palabraUsuario = $_POST["Palabra"];
 
-    echo $correo . $palabraUsuario;
-
-    $palabraVerificacion = mysqli_query($bdc, "select palabraSeguridad from admins where usuario = '$correo'") or die(mysqli_error($bdc));
+    $palabraVerificacion = mysqli_query($bdc, "select palabraSeguridad from admins where email = '$correo'") or die(mysqli_error($bdc));
 
     $resultado = mysqli_fetch_array($palabraVerificacion);
 
@@ -14,9 +12,9 @@
 
     if ($palabraDB != $palabraUsuario) {
         
-        #header("Location:reestablecerContrasena.php");
+        header("Location:reestablecerContrasena.php");
     } else {
-        #header("Location:contrasenaNueva.php");
+
     }
 
 ?>
@@ -43,7 +41,8 @@
         </form> -->
         
         <h1>Ingrese contraseña nueva:</h1>
-        <h2><?php echo $correo . " Usuario<>Contrasena " . $palabraSeguridad;?></h2>
+
         <input type='text' name="contraseña nueva" placeholder="Contraseña nueva">
+        
     </body>
 </html>

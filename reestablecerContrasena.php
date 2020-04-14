@@ -12,9 +12,9 @@
         <h1>Login</h1>
         <form action="contrasenaNueva.php" method="post">
             <p>Ingrese su correo electrónico</p>
-            <input type='text' name="Correo electrónico" placeholder="Correo electrónico" id="correo">
+            <input type='text' name="Correo" placeholder="Correo electrónico">
             <br>
-            <input type='text' name="Palabra de seguridad" placeholder="Palabra de seguridad" id="palabraSeguridad">
+            <input type='text' name="Palabra" placeholder="Palabra de seguridad">
             <br>
             <input type="submit" value="Reestablecer Contraseña">
         </form>
