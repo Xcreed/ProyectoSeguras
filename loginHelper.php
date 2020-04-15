@@ -12,8 +12,9 @@
 
     $contrasenaDB = $resultado{0};
 
-    if ($contrasenaDB == $contrasena) {
+    if ($contrasenaDB == md5($contrasena) && $contrasena != "") {
         $_SESSION['usuarioValido'] = 1;
+        $_SESSION['username'] = $usuario;
         header('Location: admin.php');
     } else {
         $_SESSION['intentosFallidos'] = $_SESSION['intentosFallidos'] + 1;

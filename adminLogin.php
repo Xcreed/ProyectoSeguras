@@ -6,7 +6,7 @@
     }
 
     if(isset($_POST['contrasenaNueva'])){
-        $nuevaContrasena = $_POST['contrasenaNueva'];
+        $nuevaContrasena = md5($_POST['contrasenaNueva']);
         $correo = $_POST['correo'];
         if (isset($_POST['contrasenaNueva']) and $_POST['contrasenaNueva'] != "") {
             include "dbconnect.php";
@@ -47,3 +47,5 @@
         </form>
     </body>
 </html>
+
+<!-- Agregar con JS que se requieran los campos con valores -->

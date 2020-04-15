@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,10 +10,34 @@
     </head>
     <body>
 
-        <h1>Borrar admins</h1>
-        <h1> Modificar Admins</h1>
-        <h1> Agregar Admins</h1>
-        <h1> Borrar admin2</h1>
+        <h1>Administradores Disponibles</h1>
+        
+        <table style="padding=2px;" border=1>
+            <tr class="encabezado"> 
+                <td>Nombre</td>
+                <td>Usuario</td>
+                <td>Email</td>
+                <td>Acciones</td>
+            </tr>
+        
+        <?php
+            
+            include "dbconnect.php";
+            
+            $resultado = mysqli_query($bdc, 'select id_admin, usuario, email, nombre, apellido1, apellido2 from admins order by nombre asc') or die(mysqli_error($bdc));
+        
+            while ($registros = mysqli_fetch_array($resultado)) {
+                $id = $registros{0};
+                echo "<tr>";
+                echo "<td class=detalle>". $registros[3] . " " . $registros[4] . " " . $registros[5] . "</td> ";
+                echo "<td class=detalle>". $registros[1]. "</td> ";
+                echo "<td class=detalle>". $registros[2]. "</td> ";
+                echo "<td class=detalle><a href='modificar.php?id=$id'><img src=resources/modificar.png width=20px></a><a href='eliminar.php?id=$id'><img src=resources/eliminar.png width=20px></a></td>";
+                echo "</tr>";
+            }
 
+        ?>
+            </table>
+        <a href=agregar.php>Agregar</a>
     </body>
 </html>

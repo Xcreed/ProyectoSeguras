@@ -14,6 +14,7 @@
             <p>Ingrese su correo electrónico</p>
             <input type='text' name="Correo" placeholder="Correo electrónico">
             <br>
+            <p>Ingrese su palabra de seguridad</p>
             <input type='text' name="Palabra" placeholder="Palabra de seguridad">
             <br>
             <input type="submit" value="Reestablecer Contraseña">
