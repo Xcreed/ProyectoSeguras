@@ -2,7 +2,6 @@
 
 session_start();
 
-
 if (!isset($_SESSION['usuarioValido']) or $_SESSION['usuarioValido'] == 0) {
     header("Location: adminLogin.php");
 }
@@ -22,7 +21,7 @@ if (!isset($_SESSION['usuarioValido']) or $_SESSION['usuarioValido'] == 0) {
 
         <a href="administrarAdmins.php"><p>Manejar Administradores</p></a>
 
-        <a href="adminLogin.php"><p>Cerrar Sesión</p><?php session_destroy();?></a>
+        <a href="adminLogin.php"><p>Cerrar Sesión</p><?php $_SESSION['logout'] = '1';?></a>
         
         <table style="padding=2px;" border=1>
             <tr class="encabezado"> 

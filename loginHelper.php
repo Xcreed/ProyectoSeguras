@@ -1,7 +1,8 @@
 <?php
+    session_start();
+
     include "dbconnect.php";
 
-    session_start();
     $usuario = $_POST["Usuario"];
     $contrasena = $_POST["Contraseña"]; 
 
@@ -13,6 +14,7 @@
     $contrasenaDB = $resultado{0};
 
     if ($contrasenaDB == md5($contrasena) && $contrasena != "") {
+        session_start();
         $_SESSION['usuarioValido'] = 1;
         $_SESSION['username'] = $usuario;
         header('Location: admin.php');

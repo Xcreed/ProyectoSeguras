@@ -1,4 +1,12 @@
-<?php session_start();?>
+<?php 
+
+session_start();
+
+if (!isset($_SESSION['usuarioValido']) or $_SESSION['usuarioValido'] == 0) {
+    #header("Location: adminLogin.php");
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>

@@ -17,6 +17,10 @@
         }
         
     }
+    
+    if(isset($_SESSION['logout'])){
+        session_destroy();
+    }
 
 
 
@@ -49,3 +53,5 @@
 </html>
 
 <!-- Agregar con JS que se requieran los campos con valores -->
+
+
