@@ -2,8 +2,8 @@
     <head>
         <meta charset="utf-8">
         <title>Proyecto: Seguras</title>
-        <script src='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.js'></script>
-        <link href='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.css' rel='stylesheet' />
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
         <style>
             body { margin:0; padding:0; }
             
@@ -12,9 +12,7 @@
             #option2 { height: 100%; display: table-cell; vertical-align: middle; }
             #reportar { float: right; }
             
-            /*#reportar { width: 10%; height: 100%; float: right; }*/
             #map { position:absolute; bottom:0; width:100%; height: 90%; }
-            /*#map { position:absolute; top:0; bottom:0; width:100%; height: 85%; }*/
         </style>
     </head>
     <body>
@@ -30,10 +28,30 @@
         
         <div id='map'></div>
             <script>
-            L.mapbox.accessToken = 'pk.eyJ1IjoiZGFtYXJjZTEzNSIsImEiOiJjazhiM255bjYwMWc5M2dwOTFrenZrdTZ5In0.koh1hVg015txPxgX-HjhLw';
-            var map = L.mapbox.map('map')
-                .setView([9.994665, -84.131491], 9)
-                .addLayer(L.mapbox.styleLayer('mapbox://styles/damarce135/ck8b3wsqi1nzi1ine1fbm4fvr'));
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZGFtYXJjZTEzNSIsImEiOiJjazhiM255bjYwMWc5M2dwOTFrenZrdTZ5In0.koh1hVg015txPxgX-HjhLw';
+                var map = new mapboxgl.Map({
+                    container: 'map',
+                    style: 'mapbox://styles/damarce135/ck8b3wsqi1nzi1ine1fbm4fvr', 
+                    center: [-84.131491,9.994665], 
+                    zoom: 5
+                });
+                
+            // Add geolocate control to the map.
+            var geolocate = new mapboxgl.GeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true
+                },
+                trackUserLocation: true
+                })
+            
+            map.addControl(geolocate);
+                
+            geolocate.on('geolocate', function(e) {
+                var long = e.coords.longitude;
+                var lat = e.coords.latitude;
+                var position = [long, lat];
+                console.log(position);
+            })
             </script>
     
     </body>
