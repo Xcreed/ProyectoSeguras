@@ -15,7 +15,7 @@
         $latitud = $_POST["latitudIngresada"];     
     }
     else {
-        echo 'Incorrect';
+
     }          
 
     mysqli_query($bdc, "insert into reportes (descripcion, longitud, latitud, dateAndTime, estado) values ('$descripcion', '$longitud', '$latitud', '$dateAndTime', '$estado')") or die(mysqli_error($bdc));
