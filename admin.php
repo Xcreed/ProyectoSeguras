@@ -36,9 +36,9 @@ if (!isset($_SESSION['usuarioValido']) or $_SESSION['usuarioValido'] == 0) {
         
         <?php echo  "<h1>Bienvenido " . $_SESSION['username'] . "!</h1>"; ?>
 
-        <a href="administrarAdmins.php"><p>Manejar Administradores</p></a>
+        <a href="administrarAdmins.php"><label>Manejar Administradores</label></a>
 
-        <a href="adminLogin.php"><p>Cerrar Sesión</p><?php $_SESSION['logout'] = '1';?></a>
+        <a href="adminLogin.php"><label>Cerrar Sesión</label><?php $_SESSION['logout'] = '1';?></a>
         
         <table style="padding=2px;" border=1>
             <tr class="encabezado"> 

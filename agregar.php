@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <title>Proyecto: Seguras</title>
-        
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -16,10 +16,10 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        
+
         <style>
             body { margin:0; padding:0; }
-            
+
             #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
             #option1 { display: table-cell; vertical-align: middle; }
             #option2 { height: 100%; display: table-cell; vertical-align: middle; }
@@ -30,29 +30,47 @@
     </head>
     <body>
 
-        <p>Agregar usuario</p>
+        <label>Agregar usuario</label>
+        <div class="container">
+            <form action="insertarRegistro.php" method="post">
+                <div class="form-group">
 
-        <form action="insertarRegistro.php" method="post">
-            <p>Usuario</p>
-            <input type='text' name="usuario" placeholder="Usuario">
-            <p>Nombre</p>
-            <input type='text' name="nombre" placeholder="Nombre">
-            <p>Primer Apellido</p>
-            <input type="text" name="apellido1" placeholder="Primer Apellido">
-            <p>Segundo Apellido</p>
-            <input type="text" name="apellido2" placeholder="Segundo Apellido">
-            <p>Password</p>
-            <input type='password' name="password" placeholder="Contrasena">
-            <br>
-            <p>Correo</p>
-            <input type=text name="correo" placeholder="Correo">
-            <br>
-            <p>Palabra de seguridad</p>
-            <input type="text" name="palabraSeguridad" placeholder="Palabra de seguridad">
-            <br>
-            <input type="submit" value="Enviar">
+                    <label>Usuario</label>
+                    <input type='text' name="usuario" placeholder="Usuario">
+                </div>
+                <div class="form-group">
 
-        </form>
+                    <label>Nombre</label>
+                    <input type='text' name="nombre" placeholder="Nombre">
+                </div>
+                <div class="form-group">
 
+                    <label>Primer Apellido</label>
+                    <input type="text" name="apellido1" placeholder="Primer Apellido">
+                </div>
+                <div class="form-group">
+
+                    <label>Segundo Apellido</label>
+                    <input type="text" name="apellido2" placeholder="Segundo Apellido">
+                </div>
+                <div class="form-group">
+
+                    <label>Password</label>
+                    <input type='password' name="password" placeholder="Contrasena">
+                </div>
+                <div class="form-group">
+
+                    <label>Correo</label>
+                    <input type=text name="correo" placeholder="Correo">
+                </div>
+                <div class="form-group">
+
+                    <label>Palabra de seguridad</label>
+                    <input type="text" name="palabraSeguridad" placeholder="Palabra de seguridad">
+                </div>
+                <input type="submit" value="Enviar" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
     </body>
 </html>
