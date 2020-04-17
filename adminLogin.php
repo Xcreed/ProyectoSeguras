@@ -13,8 +13,8 @@ if(isset($_POST['contrasenaNueva'])){
 
         mysqli_query($bdc, "update admins set contrasena = '$nuevaContrasena' where email = '$correo'") or die(mysqli_error($bdc));
 
-        echo "Contrasena cambiada! La nueva es: " . $correo;
     }
+        $_SESSION['intentosFallidos'] = 0;
 
 }
 
@@ -59,12 +59,12 @@ if(isset($_SESSION['logout'])){
             <h1>Login</h1>
             <form action="loginHelper.php" method="post">
                 <div class="form-group">
-                    <label>Nombre</label>
-                    <input type="text" class="form-control" name="Usuario" placeholder="Usuario">
+                    <label>Usuario</label>
+                    <input type="text" class="form-control" name="Usuario" placeholder="Usuario" required>
                 </div>
                 <div class="form-group">
-                    <label>Password</label>
-                    <input class="form-control" type='password' name="Contraseña" placeholder="Contraseña">
+                    <label>Contraseña</label>
+                    <input class="form-control" type='password' name="Contraseña" placeholder="Contraseña" required>
                     <small id="passwordHelpBlock" class="form-text text-muted" style="color: #b20000;">
                         Usuario o contraseña incorrectos.
                     </small>

@@ -51,14 +51,16 @@ if ($palabraDB != $palabraUsuario) {
         <div class="container">
             <h1>Ingrese contraseña nueva:</h1>
 
-            <form method="post" action="adminLogin.php"> 
+            <form method="post" action="adminLogin.php" name="form"> 
                 <div class="form-group">
                     <input type="hidden" name="correo" value="<?php echo $correo;?>" class="form-control">
                 </div>
                 <div class="form-group">
 
-                    <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva" class="form-control" pattern=".{8,}" required title="Minimo 8 caracteres">
->
+                    <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva" class="form-control" pattern=".{8,}"   required title="Minimo 8 caracteres" m>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        La contrasena debe ser de 8 caracteres minimo.
+                    </small>
                 </div>
 
                 <input type="submit" name="cambiar" value="Cambiar Contraseña" class="btn btn-primary"> 
