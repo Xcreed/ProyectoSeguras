@@ -29,44 +29,44 @@ session_start();
         </style>
     </head>
     <body>
-
-        <label>Agregar usuario</label>
         <div class="container">
+
+        <h1>Agregar usuario</h1>
             <form action="insertarRegistro.php" method="post">
                 <div class="form-group">
 
                     <label>Usuario</label>
-                    <input type='text' name="usuario" placeholder="Usuario">
+                    <input type='text' name="usuario" placeholder="Usuario" class="form-control">
                 </div>
                 <div class="form-group">
 
                     <label>Nombre</label>
-                    <input type='text' name="nombre" placeholder="Nombre">
+                    <input type='text' name="nombre" placeholder="Nombre" class="form-control">
                 </div>
                 <div class="form-group">
 
                     <label>Primer Apellido</label>
-                    <input type="text" name="apellido1" placeholder="Primer Apellido">
+                    <input type="text" name="apellido1" placeholder="Primer Apellido" class="form-control">
                 </div>
                 <div class="form-group">
 
                     <label>Segundo Apellido</label>
-                    <input type="text" name="apellido2" placeholder="Segundo Apellido">
+                    <input type="text" name="apellido2" placeholder="Segundo Apellido" class="form-control">
                 </div>
                 <div class="form-group">
 
                     <label>Password</label>
-                    <input type='password' name="password" placeholder="Contrasena">
+                    <input type='password' name="password" placeholder="Contrasena" class="form-control">
                 </div>
                 <div class="form-group">
 
                     <label>Correo</label>
-                    <input type=text name="correo" placeholder="Correo">
+                    <input type=text name="correo" placeholder="Correo" class="form-control">
                 </div>
                 <div class="form-group">
 
                     <label>Palabra de seguridad</label>
-                    <input type="text" name="palabraSeguridad" placeholder="Palabra de seguridad">
+                    <input type="text" name="palabraSeguridad" placeholder="Palabra de seguridad" class="form-control">
                 </div>
                 <input type="submit" value="Enviar" class="btn btn-primary">
                 </div>

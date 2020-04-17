@@ -67,10 +67,9 @@
             </div>
             <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Ingresar">
+                <a href="reestablecerContrasena.php"><button class="btn btn-primary">Reestablecer Contraseña</button></a>
             </div>
             <div class="form-group">
-            <a href="reestablecerContrasena.php">Reestablecer Contraseña</a>
-                <br>
             <label>Intentos Fallidos: <?php echo $_SESSION['intentosFallidos'];?></label>
             </div>
         </form>

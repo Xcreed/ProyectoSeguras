@@ -45,26 +45,37 @@
         </style>
     </head>
     <body>
+        <div class="container">
 
-        <p>Agregar usuario</p>
+        <h1>Modificar usuario</h1>
 
         <form action="modificarRegistro.php" method="post">
-            <p>Usuario</p>
-            <input type='text' name="usuario" placeholder="Usuario" value="<?php echo $usuario;?>">
-            <p>Nombre</p>
-            <input type='text' name="nombre" placeholder="Nombre" value="<?php echo $nombre;?>">
-            <p>Primer Apellido</p>
-            <input type="text" name="apellido1" placeholder="Primer Apellido" value="<?php echo $apellido1;?>">
-            <p>Segundo Apellido</p>
-            <input type="text" name="apellido2" placeholder="Segundo Apellido" value="<?php echo $apellido2;?>">
-            <p>Correo</p>
-            <input type=text name="correo" placeholder="Correo" value="<?php echo $correo;?>">
-            <br>
+            <div class="form-group">
+            <label>Usuario</label>
+            <input type='text' name="usuario" placeholder="Usuario" value="<?php echo $usuario;?>" class="form-control">
+            </div>
+            <div class="form-group">
+            <label>Nombre</label>
+            <input type='text' name="nombre" placeholder="Nombre" value="<?php echo $nombre;?>" class="form-control">
+            </div>
+            <div class="form-group">
+            <label>Primer Apellido</label>
+            <input type="text" name="apellido1" placeholder="Primer Apellido" value="<?php echo $apellido1;?>" class="form-control">
+            </div>
+            <div class="form-group">
+            <label>Segundo Apellido</label>
+            <input type="text" name="apellido2" placeholder="Segundo Apellido" value="<?php echo $apellido2;?>" class="form-control">
+            </div>
+            <div class="form-group">
+            <label>Correo</label>
+            <input type=text name="correo" placeholder="Correo" value="<?php echo $correo;?>" class="form-control">
+            </div>
+            
             <input type="hidden" name="id" value="<?php echo $id;?>">
-            <br>
-            <input type="submit" value="Enviar">
-
+            <div class="form-group">
+            <input type="submit" value="Enviar" class="btn btn-primary">
+            </div>
         </form>
-
+        </div>
     </body>
 </html>

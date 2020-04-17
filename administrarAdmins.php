@@ -34,10 +34,10 @@ if (!isset($_SESSION['usuarioValido']) or $_SESSION['usuarioValido'] == 0) {
         </style>
     </head>
     <body>
+        <div class="container">
 
         <h1>Administradores Disponibles</h1>
 
-        <div class="container">
             <div class="table-responsive">
             <table style="padding=2px;" border=1 class="table-bordered table-hover">
                 <thead>

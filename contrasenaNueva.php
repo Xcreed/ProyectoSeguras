@@ -25,7 +25,7 @@ if ($palabraDB != $palabraUsuario) {
     <head>
         <meta charset="utf-8">
         <title>Proyecto: Seguras</title>
-        
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -34,10 +34,10 @@ if ($palabraDB != $palabraUsuario) {
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        
+
         <style>
             body { margin:0; padding:0; }
-            
+
             #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
             #option1 { display: table-cell; vertical-align: middle; }
             #option2 { height: 100%; display: table-cell; vertical-align: middle; }
@@ -48,14 +48,21 @@ if ($palabraDB != $palabraUsuario) {
     </head>
     <body>
 
-        <h1>Ingrese contraseña nueva:</h1>
-        <form method="post" action="adminLogin.php"> 
-            <input type="hidden" name="correo" value="<?php echo $correo;?>">
-            <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva">
+        <div class="container">
+            <h1>Ingrese contraseña nueva:</h1>
 
-            <input type="submit" name="cambiar" value="Cambiar"/> 
-        </form>
+            <form method="post" action="adminLogin.php"> 
+                <div class="form-group">
+                    <input type="hidden" name="correo" value="<?php echo $correo;?>" class="form-control">
+                </div>
+                <div class="form-group">
 
+                    <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva" class="form-control">
+                </div>
+
+                <input type="submit" name="cambiar" value="Cambiar Contraseña" class="btn btn-primary"> 
+            </form>
+        </div>
 
     </body>
 </html>
