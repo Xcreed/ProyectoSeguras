@@ -31,24 +31,50 @@
 
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Seguras</title>
-        <meta name="Seguras" content="Alertas hechas para ellas.">
-        <link rel="stylesheet" href="main.css">
+        <title>Proyecto: Seguras</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <style>
+            body { margin:0; padding:0; }
+            
+            #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
+            #option1 { display: table-cell; vertical-align: middle; }
+            #option2 { height: 100%; display: table-cell; vertical-align: middle; }
+            #reportar { float: right; }
+
+            #reporteForm { position:absolute; bottom:0; width:100%; height: 90%; }
+        </style>
     </head>
     <body>
+        <div class="container">
         <h1>Login</h1>
         <form action="loginHelper.php" method="post">
-            <p>Nombre</p>
-            <input type='text' name="Usuario" placeholder="Usuario">
-            <p>Password</p>
-            <input type='password' name="Contraseña" placeholder="Contraseña">
-            <br>
-            <input type="submit" value="Ingresar">
-            <br>
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" name="Usuario" placeholder="Usuario">
+            </div>
+            <div class="form-group">
+            <label>Password</label>
+            <input class="form-control" type='password' name="Contraseña" placeholder="Contraseña">
+            </div>
+            <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Ingresar">
+            </div>
+            <div class="form-group">
             <a href="reestablecerContrasena.php">Reestablecer Contraseña</a>
-            <p>Intentos Fallidos: <?php echo $_SESSION['intentosFallidos'];?></p>
+                <br>
+            <label>Intentos Fallidos: <?php echo $_SESSION['intentosFallidos'];?></label>
+            </div>
         </form>
+        </div>
     </body>
 </html>
 
