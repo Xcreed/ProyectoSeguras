@@ -57,7 +57,8 @@ if ($palabraDB != $palabraUsuario) {
                 </div>
                 <div class="form-group">
 
-                    <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva" class="form-control">
+                    <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva" class="form-control" pattern=".{8,}" required title="Minimo 8 caracteres">
+>
                 </div>
 
                 <input type="submit" name="cambiar" value="Cambiar Contraseña" class="btn btn-primary"> 
