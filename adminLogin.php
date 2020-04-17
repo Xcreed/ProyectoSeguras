@@ -19,6 +19,7 @@
     }
     
     if(isset($_SESSION['logout'])){
+        $_SESSION['intentosFallidos'] = 0;
         session_destroy();
     }
 
@@ -67,16 +68,22 @@
             </div>
             <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Ingresar">
-                <a href="reestablecerContrasena.php"><button class="btn btn-primary">Reestablecer Contraseña</button></a>
             </div>
             <div class="form-group">
-            <label>Intentos Fallidos: <?php echo $_SESSION['intentosFallidos'];?></label>
+            <a href="reestablecerContrasena.php">Restablecer Contraseña</a>
+                <br>
+            <label id='fallidos'>Intentos Fallidos: <?php echo $_SESSION['intentosFallidos'];?></label>
             </div>
         </form>
         </div>
     </body>
 </html>
 
+<script>
+    if ($("#fallidos").text() == "Intentos Fallidos: 0") {
+        $("#fallidos").hide();
+    }
+</script>
 <!-- Agregar con JS que se requieran los campos con valores -->
 
 
