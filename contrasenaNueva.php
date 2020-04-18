@@ -35,16 +35,7 @@ if ($palabraDB != $palabraUsuario) {
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        <style>
-            body { margin:0; padding:0; }
-
-            #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
-            #option1 { display: table-cell; vertical-align: middle; }
-            #option2 { height: 100%; display: table-cell; vertical-align: middle; }
-            #reportar { float: right; }
-
-            #reporteForm { position:absolute; bottom:0; width:100%; height: 90%; }
-        </style>
+        
     </head>
     <body>
 
@@ -57,9 +48,9 @@ if ($palabraDB != $palabraUsuario) {
                 </div>
                 <div class="form-group">
 
-                    <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva" class="form-control" pattern=".{8,}"   required title="Minimo 8 caracteres" m>
+                    <input type='text' name="contrasenaNueva" placeholder="Contraseña nueva" class="form-control" pattern=".{8,}"   required title="Mínimo 8 caracteres">
                     <small id="passwordHelpBlock" class="form-text text-muted">
-                        La contrasena debe ser de 8 caracteres minimo.
+                        La contraseña debe ser de 8 caracteres mínimo.
                     </small>
                 </div>
 

@@ -13,17 +13,6 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-        <style>
-            body { margin:0; padding:0; }
-
-            #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
-            #option1 { display: table-cell; vertical-align: middle; }
-            #option2 { height: 100%; display: table-cell; vertical-align: middle; }
-            #reportar { float: right; }
-
-            #reporteForm { position:absolute; bottom:0; width:100%; height: 90%; }
-        </style>
     </head>
     <body>
         <div class="container">

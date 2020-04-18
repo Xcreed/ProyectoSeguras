@@ -33,16 +33,6 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         
-        <style>
-            body { margin:0; padding:0; }
-            
-            #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
-            #option1 { display: table-cell; vertical-align: middle; }
-            #option2 { height: 100%; display: table-cell; vertical-align: middle; }
-            #reportar { float: right; }
-
-            #reporteForm { position:absolute; bottom:0; width:100%; height: 90%; }
-        </style>
     </head>
     <body>
         <div class="container">
@@ -52,28 +42,28 @@
         <form action="modificarRegistro.php" method="post">
             <div class="form-group">
             <label>Usuario</label>
-            <input type='text' name="usuario" placeholder="Usuario" value="<?php echo $usuario;?>" class="form-control">
+            <input type='text' name="usuario" placeholder="Usuario" value="<?php echo $usuario;?>" class="form-control" required>
             </div>
             <div class="form-group">
             <label>Nombre</label>
-            <input type='text' name="nombre" placeholder="Nombre" value="<?php echo $nombre;?>" class="form-control">
+            <input type='text' name="nombre" placeholder="Nombre" value="<?php echo $nombre;?>" class="form-control" required>
             </div>
             <div class="form-group">
             <label>Primer Apellido</label>
-            <input type="text" name="apellido1" placeholder="Primer Apellido" value="<?php echo $apellido1;?>" class="form-control">
+            <input type="text" name="apellido1" placeholder="Primer Apellido" value="<?php echo $apellido1;?>" class="form-control" required>
             </div>
             <div class="form-group">
             <label>Segundo Apellido</label>
-            <input type="text" name="apellido2" placeholder="Segundo Apellido" value="<?php echo $apellido2;?>" class="form-control">
+            <input type="text" name="apellido2" placeholder="Segundo Apellido" value="<?php echo $apellido2;?>" class="form-control" required>
             </div>
             <div class="form-group">
             <label>Correo</label>
-            <input type=text name="correo" placeholder="Correo" value="<?php echo $correo;?>" class="form-control">
+            <input type=text name="correo" placeholder="Correo" value="<?php echo $correo;?>" class="form-control" required>
             </div>
             
             <input type="hidden" name="id" value="<?php echo $id;?>">
             <div class="form-group">
-            <input type="submit" value="Enviar" class="btn btn-primary">
+            <input type="submit" value="Modificar" class="btn btn-primary">
             </div>
         </form>
         </div>
