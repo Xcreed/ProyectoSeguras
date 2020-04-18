@@ -35,6 +35,25 @@
         
     </head>
     <body>
+        
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="main.php">
+                        <img id="logo" src="logoSeg.PNG" width="30" height="30">
+                    </a>
+                </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="admin.php">Reportes</a></li>
+                            <li class="active"><a href="administrarAdmins.php">Administrar administradores<span class="sr-only">(current)</span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a onclick="logout()">Cerrar Sesión</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+        </nav>
         <div class="container">
 
         <h1>Modificar usuario</h1>

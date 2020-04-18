@@ -30,23 +30,23 @@ if (!isset($_SESSION['usuarioValido']) or $_SESSION['usuarioValido'] == 0) {
     </head>
     <body>
 
-        <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+        <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="main.php">
                         <img id="logo" src="logoSeg.PNG" width="30" height="30">
                     </a>
+                </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="admin.php">Reportes<span class="sr-only">(current)</span></a></li>
                             <li class=""><a href="administrarAdmins.php">Administrar administradores<span class="sr-only"></span></a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a onclick="logout()">Cerrar Sesión</a></li>
+                            <li><a onclick="logout()">Cerrar Sesión<span class="sr-only"></span></a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div>
-            </div>
         </nav>
 
         <div class="container">

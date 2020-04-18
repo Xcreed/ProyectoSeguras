@@ -35,10 +35,19 @@ if ($palabraDB != $palabraUsuario) {
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        
+
     </head>
     <body>
+        <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="main.php">
+                        <img id="logo" src="logoSeg.PNG" width="30" height="30">
+                    </a>
 
+                </div>
+            </div>
+        </nav>
         <div class="container">
             <h1>Ingrese contraseña nueva:</h1>
 
