@@ -54,7 +54,7 @@ if (!isset($_SESSION['usuarioValido']) or $_SESSION['usuarioValido'] == 0) {
                     echo "<td>". $registros{1} . "</td> ";
                     echo "<td>". $registros{2} . "</td> ";
                     echo "<td class=detalle>". $registros[3] . ", " . $registros{4}. "</td> ";
-                    echo "<td class=detalle><a href='aceptarReporte.php?id=$id'><img src=resources/modificar.png width=20px></a>";
+                    echo "<td class=detalle><a href='aceptarReporte.php?id=$id'><img src=resources/aceptar.png width=20px></a><a href='rechazarReporte.php?id=$id'><img src=resources/eliminar.png width=20px></a>" ;
                     echo "</tr>";
                 }
 
