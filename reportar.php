@@ -18,14 +18,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         
         <style>
-            body { margin:0; padding:0; }
+            body { margin:0; padding:0; height: 100%;}
+                
+            #map { position:absolute; bottom:0; width:100%; height: 93%; }
             
-            #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
-            #option1 { display: table-cell; vertical-align: middle; }
-            #option2 { height: 100%; display: table-cell; vertical-align: middle; }
-            #reportar { float: right; }
-
-            #reporteForm { position:absolute; bottom:0; width:100%; height: 90%; }
+            .navbar { margin-bottom: 0px; }
+            
         </style>
         
     </head>
@@ -45,12 +43,23 @@
             
         </script>
         
-        
-        <div id="menu">
-            <div id="option1">
-                <h1>Seguras</h1>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="main.php">
+                <img id="logo" src="logoSeg.PNG" width="30" height="30">
+              </a>
             </div>
-        </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <!--<ul class="nav navbar-nav">
+                <li class="active"><a href="#">Reportar Incidente <span class="sr-only">(current)</span></a></li>
+              </ul>-->
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="about.php">About</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </nav>
         
         <div id=reporteForm>
             <div class="container">
