@@ -12,7 +12,7 @@
     $resultado = mysqli_fetch_array($contrasenaVerificacion);
 
     $contrasenaDB = $resultado{0};
-    $nombre ¿ $resultado{1};
+    $nombre = $resultado{1};
 
     if ($contrasenaDB == md5($contrasena) && $contrasena != "") {
         session_start();

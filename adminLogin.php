@@ -50,12 +50,20 @@ if(isset($_SESSION['logout']) and $_SESSION['logout'] == 1){
     <body>
         <nav class="navbar navbar-default" style="margin-bottom: 0px;">
             <div class="container-fluid">
-                <div class="navbar-header">
+                <div class="navbar-header" id="header">
                     <a class="navbar-brand" href="main.php">
                         <img id="logo" src="logoSeg.PNG" width="30" height="30">
                     </a>
-                    
                 </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="admin.php">Admin Login</a></li>
+                        <li><a href="about.php">About</a></li>
+
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
             </div>
         </nav>
         <div class="container">
