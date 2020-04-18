@@ -14,6 +14,9 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZoly_sMdqz9uuxrol9pu1EGzJLLLOfh8&callback=initMap"
+            type="text/javascript"></script>
+        
         <style>
             body { margin:0; padding:0; }
             
@@ -40,46 +43,19 @@
             </div>
         </div>
         
-        <div id='map'></div>
-            <script>    
-            var long;
-            var lat;
-                
-            mapboxgl.accessToken = 'pk.eyJ1IjoiZGFtYXJjZTEzNSIsImEiOiJjazhiM255bjYwMWc5M2dwOTFrenZrdTZ5In0.koh1hVg015txPxgX-HjhLw';
-                var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/damarce135/ck8b3wsqi1nzi1ine1fbm4fvr', 
-                    center: [-84.131491,9.994665], 
-                    zoom: 5
-                });
-                console.log(map);
-            // Add geolocate control to the map.
-            var geolocate = new mapboxgl.GeolocateControl({
-                positionOptions: {
-                    enableHighAccuracy: true
-                },
-                trackUserLocation: true
-                })
-            
-            map.addControl(geolocate);
-                
-            geolocate.on('geolocate', function(e) {
-                long = e.coords.longitude;
-                lat = e.coords.latitude;
-                var position = [long, lat];
-                
-            })
-                            
-            function myfunction () {
-                var url = window.location.href;
-                url = url.replace("/main.php","/reportar.php");
-                url+= "?longitud=" + long + "&latitud=" + lat;
-                window.location.replace(url);
-                localStorage.setItem("mapa", map);
-            }
-                
-            </script>
-        
+        <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+        </script>   
     </body>
 </html>
 

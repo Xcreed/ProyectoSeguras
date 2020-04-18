@@ -12,6 +12,21 @@ $longitud = $registro{0};
 $latitud = $registro{1};
 #header("Location: admin.php");
 
+$apiKey = "sk.eyJ1IjoiZGFtYXJjZTEzNSIsImEiOiJjazk1MWFremgwNTFrM2dxOWp3NzRvdDhwIn0.UCBdhPLl23z2ZxMevVnY_Q";
+
+$data = "{'field_name': 'field_value'}";
+$url = "http://webservice.url";
+$headers = array('Content-Type: application/json');
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PATCH');
+curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+$response = curl_exec($curl);
+curl_close($curl);
+
+
 ?>
 <head>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
@@ -27,54 +42,6 @@ $latitud = $registro{1};
 <div id="map"></div>
 <input type="hidden" value="<?php echo $longitud;?>" id="long">
 <input type="hidden" value="<?php echo $latitud;?>" id="lat">
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZGFtYXJjZTEzNSIsImEiOiJjazhiM255bjYwMWc5M2dwOTFrenZrdTZ5In0.koh1hVg015txPxgX-HjhLw';
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
-        center: [-96, 37.8],
-        zoom: 3
-    });
+/*
 
-    var long = Number($("#long").val());
-    var lat = Number($("#lat").val());
-    map.on('load', function() {
-        map.addSource('points', {
-            'type': 'geojson',
-            'data': {
-                'type': 'FeatureCollection',
-                'features': [
-                    {
-                        // feature for Mapbox DC
-                        'type': 'Feature',
-                        'geometry': {
-                            'type': 'Point',
-                            'coordinates': [
-                                long, lat
-
-                            ]
-                        },
-                        'properties': {
-                            'title': 'JP TEST'
-                        }
-                    }
-                ]
-            }
-        });
-        map.addLayer({
-            'id': 'points',
-            'type': 'symbol',
-            'source': 'points',
-            'layout': {
-                // get the icon name from the source's "icon" property
-                // concatenate the name to get an icon from the style's sprite sheet
-                'icon-image': ['concat', ['get', 'icon'], '-15'],
-                // get the title name from the source's "title" property
-                'text-field': ['get', 'title'],
-                'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-                'text-offset': [0, 0.6],
-                'text-anchor': 'top'
-            }
-        });
-    });
-</script>
+*/
