@@ -17,58 +17,73 @@ session_start();
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        <style>
-            body { margin:0; padding:0; }
-
-            #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
-            #option1 { display: table-cell; vertical-align: middle; }
-            #option2 { height: 100%; display: table-cell; vertical-align: middle; }
-            #reportar { float: right; }
-
-            #reporteForm { position:absolute; bottom:0; width:100%; height: 90%; }
-        </style>
+        
     </head>
     <body>
+        
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="main.php">
+                        <img id="logo" src="logoSeg.PNG" width="30" height="30">
+                    </a>
+                </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="admin.php">Reportes</a></li>
+                            <li class="active"><a href="administrarAdmins.php">Administrar administradores<span class="sr-only">(current)</span></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a onclick="logout()">Cerrar Sesión</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+        </nav>
+        
         <div class="container">
 
-        <h1>Agregar usuario</h1>
+        <h1>Agregar administrador</h1>
             <form action="insertarRegistro.php" method="post">
                 <div class="form-group">
 
                     <label>Usuario</label>
-                    <input type='text' name="usuario" placeholder="Usuario" class="form-control">
+                    <input type='text' name="usuario" placeholder="Usuario" class="form-control" required>
                 </div>
                 <div class="form-group">
 
                     <label>Nombre</label>
-                    <input type='text' name="nombre" placeholder="Nombre" class="form-control">
+                    <input type='text' name="nombre" placeholder="Nombre" class="form-control" required>
                 </div>
                 <div class="form-group">
 
                     <label>Primer Apellido</label>
-                    <input type="text" name="apellido1" placeholder="Primer Apellido" class="form-control">
+                    <input type="text" name="apellido1" placeholder="Primer Apellido" class="form-control" required>
                 </div>
                 <div class="form-group">
 
                     <label>Segundo Apellido</label>
-                    <input type="text" name="apellido2" placeholder="Segundo Apellido" class="form-control">
+                    <input type="text" name="apellido2" placeholder="Segundo Apellido" class="form-control" required>
                 </div>
                 <div class="form-group">
 
-                    <label>Password</label>
-                    <input type='password' name="password" placeholder="Contrasena" class="form-control">
+                    <label>Contraseña</label>
+                    <input type='password' name="password" placeholder="Contraseña" class="form-control" pattern=".{8,}"   required title="Mínimo 8 caracteres">
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        La contraseña debe ser de 8 caracteres mínimo.
+                    </small>
                 </div>
                 <div class="form-group">
 
                     <label>Correo</label>
-                    <input type=text name="correo" placeholder="Correo" class="form-control">
+                    <input type=text name="correo" placeholder="Correo" class="form-control" required>
                 </div>
                 <div class="form-group">
 
                     <label>Palabra de seguridad</label>
-                    <input type="text" name="palabraSeguridad" placeholder="Palabra de seguridad" class="form-control">
+                    <input type="text" name="palabraSeguridad" placeholder="Palabra de seguridad" class="form-control" required>
                 </div>
-                <input type="submit" value="Enviar" class="btn btn-primary">
+                <div class="form-group">
+                <input type="submit" value="Agregar Usuario" class="btn btn-primary">
                 </div>
             </form>
         </div>

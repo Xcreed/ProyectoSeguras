@@ -13,19 +13,18 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-        <style>
-            body { margin:0; padding:0; }
-
-            #menu { width: 100%; height: 10%; display: table; table-layout: fixed; background-color:aliceblue; border: 10px; }
-            #option1 { display: table-cell; vertical-align: middle; }
-            #option2 { height: 100%; display: table-cell; vertical-align: middle; }
-            #reportar { float: right; }
-
-            #reporteForm { position:absolute; bottom:0; width:100%; height: 90%; }
-        </style>
     </head>
     <body>
+        <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="main.php">
+                        <img id="logo" src="logoSeg.PNG" width="30" height="30">
+                    </a>
+
+                </div>
+            </div>
+        </nav>
         <div class="container">
 
             <h1>Restablezca su contraseña</h1>
