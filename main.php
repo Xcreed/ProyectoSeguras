@@ -28,13 +28,13 @@
         <nav class="navbar navbar-default" style="margin-bottom: 0px;">
             <div class="container-fluid">
                 <div class="navbar-header" id="header">
-                    <a class="navbar-brand" href="main.php">
-                        <img id="logo" src="logoSeg.PNG" width="30" height="30">
+                    <a class="navbar-brand" style="padding: 5px 5px;" href="main.php">
+                        <img id="logo" src="logoSeg.PNG" width="40" height="40">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a onclick="reportar()">Reportar Incidente <span class="sr-only">(current)</span></a></li>
+                        <li class=""><a onclick="reportar()">Reportar Incidente <span class="sr-only">(current)</span></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="admin.php">Admin Login</a></li>
