@@ -70,7 +70,6 @@
                 long = e.coords.longitude;
                 lat = e.coords.latitude;
                 var position = [long, lat];
-                console.log(position);
                 
             })
                             
@@ -78,7 +77,6 @@
                 var url = window.location.href;
                 url = url.replace("/main.php","/reportar.php");
                 url+= "?longitud=" + long + "&latitud=" + lat;
-                console.log(url);
                 window.location.replace(url);
             }
                 
